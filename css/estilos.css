@@ -290,6 +290,8 @@ video{
 
 /*Footer*/
 
+
+
 .pie-pagina{
     width: 100%;
     background-color: rgb(7, 3, 3);
@@ -297,8 +299,9 @@ video{
 
 .pie-pagina .grupo-1 {
     width: 100%;
-    max-width: 1200px;
-    margin: 0;
+    max-width: 100%;
+    margin: 0%;
+    padding: 10%;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-gap: 50px;
