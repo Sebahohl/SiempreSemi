@@ -145,7 +145,26 @@ main section article img {
     height: 200px;
 }
 
+.tarjeta__imagen{
+    animation-name: animo;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+}
 
+@keyframes animo {
+    0%{
+        transform: scale(0.5);
+        border-radius: 100%;
+    }
+    50% {
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
 
 .tarjeta__textos{
     font-family: 'Lobster', cursive;
@@ -436,8 +455,10 @@ width: 100vw;
 max-width: 90%;
 height: 300px;
 margin: 20px auto;
+border: 5px groove black;
 
-
+/*gradiantes*/
+background-image: linear-gradient(rgb(165, 104, 155),rgb(72, 72, 97));
 
 
 display: flex;
