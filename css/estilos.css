@@ -28,7 +28,7 @@ background-color: #a78497;
 
 header{
     width: 100%;
-}
+} 
 
 
 nav{
@@ -40,11 +40,14 @@ nav{
     padding: 35px;
     font-family: Lobster;
     background-color: #000;
-}
+} 
 
 .tituloindex{
     color: #be7ea1;
-    font-size: 50px;
+    font-size: 60px;
+    font-family: Lobster ;
+    display: flex;
+    justify-content: center;
 }
 
 a{
@@ -55,7 +58,7 @@ a{
 
 /*Columna en fila*/
 
-.nav__list{
+ .nav__list{
     display: flex;
     list-style-type: none;
     padding: 5 20px;
@@ -63,7 +66,8 @@ a{
 
 .nav__list .list__links{
     padding: 0 20px;
-}
+} 
+
 
 
 
