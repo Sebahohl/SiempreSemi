@@ -628,6 +628,9 @@ main section div img .ordenimg {
   display: flex;
   justify-content: center;
 }
+.navbar-toggler-icon{
+  background-image: url(https://www.clipartmax.com/png/middle/36-365828_navbar-toggle-icon-menu-hamburger-png-white.png);
+}
 
 /*CSS grids Responsive*/
 /*Media queries teoria*/
