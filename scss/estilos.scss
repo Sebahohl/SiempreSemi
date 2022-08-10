@@ -1,4 +1,29 @@
-/*Fonts*/
+//variables
+$background: red ;
+$relleno: 20px;
+
+
+header{
+    background-color: $background;
+    nav{
+        padding: $relleno;
+        ul {
+            list-style-type: none;
+            li{
+                color: $background;
+                a{
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
 
 
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');

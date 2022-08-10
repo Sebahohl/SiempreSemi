@@ -368,6 +368,16 @@ video {
   font-size: 15px;
 }
 
+.red-social li:hover a {
+  filter: blur(2px);
+}
+
+.red-social li a:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 5px 0 5px ;
+  filter: none 
+}
+
 .comentario {
   display: flex;
   justify-content: center;
