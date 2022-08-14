@@ -4,6 +4,9 @@ $relleno: 20px;
 $colorPrincipal: #a78497;
 
 
+
+
+
 header{
     background-color: $background;
     nav{
@@ -108,7 +111,7 @@ font-family: 'Lobster' , cursive;
     flex-grow: initial;
 }
 .navbar-toggler-icon {
-    color: #a78497;
+    color: $colorPrincipal;
 }
 p {
     font-family: 'Lobster' , cursive;
@@ -123,7 +126,7 @@ li{
 
 i{
     font-size: 30px;
-    color: #a78497;
+    color: $colorPrincipal;
     padding: 30px 30px;
 }
 
@@ -154,9 +157,15 @@ font-family: 'Lobster' , cursive;;
     font-size: 30px;
 }
 
+@mixin img-size ($alto, $ancho) {
+    height: $alto;
+    width: $ancho;
+    
+}
 
 main section article img {
-    width: 450px;
+
+    @include img-size(300,450);
     margin-top: 200px;
     margin-right: 200px;
     margin-left: 710px;
