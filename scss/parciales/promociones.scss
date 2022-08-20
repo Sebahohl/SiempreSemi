@@ -1,0 +1,47 @@
+.promociones1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center ;
+    padding: 6%;
+    margin: 10%;
+    border: 3px solid black;
+}
+
+.promociones2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center ;
+    padding: 6%;
+    margin: 10%;
+    border: 3px solid black;
+}
+
+.promociones3 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center ;
+    padding: 6%;
+    margin: 10%;
+    border: 3px solid black;
+}
+
+.tarjeta__textos{
+    font-family: 'Lobster', cursive;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.tarjeta__enlace{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px auto;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-family: 'Lobster', cursive;
+
+
+}

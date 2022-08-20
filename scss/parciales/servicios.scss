@@ -1,0 +1,70 @@
+main section div img .ordenimg {
+    display: flex;
+    justify-items: center;
+    height: 100%;
+}
+
+
+.ordenimg {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5%;
+    margin: 5%;
+    border: 3px solid black;
+}
+
+.ordenimg2 {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center ;
+    padding: 5%;
+    margin: 5%;
+    border: 3px solid black;
+}
+
+
+.ordenimg3 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center ;
+    padding: 5%;
+    margin: 5%;
+    border: 3px solid black;
+}
+
+
+.boton{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 180px;
+    margin: 10px;
+    padding: 15px 30px;
+    background-color: #000;
+    border-radius: 25px;
+    text-decoration: none;
+    color:rgb(185, 129, 160)
+
+}
+
+.boton:hover{
+height: 50px;
+background-color: #a34c7c;
+
+}
+
+
+#carouselExampleControls{
+    padding: 50px 100px;
+}
+.carousel-item.active{
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-item{
+    transition: transform 2s ease-in-out;
+    position: inherit;
+}
