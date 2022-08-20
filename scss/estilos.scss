@@ -14,21 +14,6 @@ $background: #ff0000 ;
 $relleno: 20px;
 $colorPrincipal: #a78497;
 
-header{
-    background-color: $background;
-    nav{
-        padding: $relleno;
-        ul {
-            list-style-type: none;
-            li{
-                color: $background;
-                a{
-                    font-weight: 500;
-                }
-            }
-        }
-    }
-}
 
 $estilos: (
     rosado: #a78497, 
