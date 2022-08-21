@@ -403,3 +403,83 @@ a .nav-link{
     font-size: 17px
 } 
 }
+
+
+@media only screen and (max-width: 320px) {
+    /*estilos generales*/
+    nav {
+    flex-direction: column;
+    align-items: center;
+    }
+    main {
+    flex-direction: column;
+    }
+    .tarjeta__imagen {
+    width: 50px;
+    }
+    .h1siempresemi {
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    }
+    .maindiv2 {
+    grid-template-columns: repeat(1, 1fr);
+    }
+    .clientastext {
+    font-size: 20px;
+    }
+    .ordenimg {
+    padding: 20px;
+    margin: 50px;
+    }
+    .ordenimg img {
+    width: 50px;
+    }
+    .ordenimg2 {
+    padding: 20px;
+    margin: 50px;
+    }
+    .ordenimg2 img {
+    width: 50px;
+    }
+    .ordenimg3 {
+    padding: 20px;
+    margin: 50px;
+    }
+    .ordenimg3 img {
+    width: 50px;
+    }
+    .box h2 {
+    font-size: 10px;
+    }
+    .box .red-social {
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    }
+    a .nav-link {
+    display: flex;
+    justify-content: end;
+    }
+    .imgcarrusel {
+    width: 200px;
+    }
+    .h1siempresemi {
+    height: 100px;
+    }
+    .tarjeta__textos {
+    font-size: 14px;
+    }
+    .font-destacados {
+    font-size: 17px;
+    }
+
+    .pie-pagina .grupo-1{
+    display: inline-block;
+    }
+
+    i{
+    margin-left: 100px;
+    }
+
+
+  }/*# sourceMappingURL=estilos.css.map */
