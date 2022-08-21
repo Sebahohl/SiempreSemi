@@ -408,78 +408,116 @@ a .nav-link{
 @media only screen and (max-width: 320px) {
     /*estilos generales*/
     nav {
-    flex-direction: column;
-    align-items: center;
+      flex-direction: column;
+      align-items: center;
     }
     main {
-    flex-direction: column;
+      flex-direction: column;
     }
+    
+    p{
+      font-size: 7px;
+    }
+    
+    .tarjeta__enlace {
+      margin-right: 100px;
+      text-transform: none;
+    }
+    
+    
     .tarjeta__imagen {
-    width: 50px;
+      width: 50px;
     }
     .h1siempresemi {
-    font-size: 15px;
-    color: rgb(0, 0, 0);
+      font-size: 15px;
+      color: rgb(0, 0, 0);
     }
     .maindiv2 {
-    grid-template-columns: repeat(1, 1fr);
+      grid-template-columns: repeat(1, 1fr);
     }
     .clientastext {
-    font-size: 20px;
+      font-size: 20px;
     }
     .ordenimg {
-    padding: 20px;
-    margin: 50px;
+      padding: 20px;
+      margin: 50px;
     }
     .ordenimg img {
-    width: 50px;
+      width: 50px;
     }
     .ordenimg2 {
-    padding: 20px;
-    margin: 50px;
+      padding: 30px;
+      margin: 60px;
+      border: none;
     }
     .ordenimg2 img {
-    width: 50px;
+      width: 60px;
     }
     .ordenimg3 {
-    padding: 20px;
-    margin: 50px;
+      padding: 20px;
+      margin: 50px;
     }
     .ordenimg3 img {
-    width: 50px;
+      width: 50px;
     }
     .box h2 {
-    font-size: 10px;
+      font-size: 10px;
     }
     .box .red-social {
-    display: inline-block;
-    padding: 10px;
-    margin: 10px;
+      display: inline-block;
+      padding: 10px;
+      margin: 10px;
     }
     a .nav-link {
-    display: flex;
-    justify-content: end;
+      display: flex;
+      justify-content: end;
     }
     .imgcarrusel {
-    width: 200px;
+      width: 200px;
     }
     .h1siempresemi {
-    height: 100px;
+      height: 100px;
     }
     .tarjeta__textos {
-    font-size: 14px;
+      font-size: 12px;
     }
     .font-destacados {
-    font-size: 17px;
+      font-size: 10px;
     }
-
+  
     .pie-pagina .grupo-1{
-    display: inline-block;
+      display: inline-block;
     }
-
+  
     i{
-    margin-left: 100px;
+      margin-left: 100px;
     }
-
-
+  
+    .boton{
+      width: 120px;
+    }
+  
+    .clientastext{
+      font-size: 15px;
+      margin: 60px auto;
+    }
+  
+    .promociones1 {
+      border: none;
+      margin: auto;
+      padding: 4%;
+    }
+  
+    .promociones2 {
+      border: none;
+      margin: auto;
+      padding: 4%;
+    }
+  
+    .promociones3 {
+      border: none;
+      margin: auto;
+      padding: 4%;
+    }
+  
   }/*# sourceMappingURL=estilos.css.map */
