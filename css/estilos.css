@@ -900,7 +900,7 @@ main section div img .ordenimg {
     color: rgb(0, 0, 0);
   }
   .maindiv2 {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
   .clientastext {
     font-size: 20px;
@@ -950,6 +950,17 @@ main section div img .ordenimg {
   .font-destacados {
     font-size: 17px;
   }
+  .contenedorindex {
+    width: 320px;
+    }
+  
+  .item1 {
+    width: 150px;
+    height: 150px;
+  }
+  
+
+
 }/*# sourceMappingURL=estilos.css.map */
 
 
