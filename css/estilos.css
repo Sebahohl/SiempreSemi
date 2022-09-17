@@ -57,6 +57,12 @@ a {
 .nav__list .list__links{
     padding: 0 20px;
 }  */
+
+.nav-link:focus, .nav-link:hover {
+  color: aliceblue;
+}
+
+
 .navbar {
   --bs-navbar-toggler-border-color: #a77c9f;
 }
