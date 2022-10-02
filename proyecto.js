@@ -1,20 +1,28 @@
 
 
+
+
+
 let nombre = prompt ("Ingresa tu nombre ")
 alert("Bienvenida/o a siempre semi "+nombre );
 alert("Siempre semi es mi emprendimiento, es mi pasión hacer uñas y espero que te gusten mis servicios :D");
 
+menuOpt = prompt("Desea saber que servicios hay? (si/no)");
 
+let unias=prompt("Ingresa el tipo de uñas que desea realizarse (Kapping - Esculpidas - Esmaltado semipermanente) (s para salir)");
 
-let unias = prompt ("Ingrese el tipo de uñas que desea realizarse (Kapping - Esculpidas - Esmaltado semipermanente)");
+while(unias!="s"){
+    switch (unias){
+        case "Kapping":
+            alert("El precio de las uñas kapping es de $800");
+            break;
+        case "Esculpidas":
+            alert("El precio de las uñas esculpidas es de $1200");
+            break;
+        case "Esmaltado semipermanente":
+            alert("El precio de las uñas de esmaltado semipermanente es de $800");
+            break;
+    }
 
-if ((unias == "Kapping")||(unias== "kapping")){
-    alert("El precio de las uñas kapping es $800");
-}else if((unias == "Esculpidas")|| (unias== "esculpidas")){
-    alert("El precio de las Esculpidas es de $1200");
-}else if ((unias == "Esmaltado Semipermanente")|| (unias== "esmaltado semipermanente")){
-    alert("El precio de las esmaltado semipermanente es de $700");
-    unias=prompt("Ingresa el tipo de uñas que desea (s para salir)");
+    unias=prompt("Desea ver algun precio más? (s para salir)");
 }
-
-
