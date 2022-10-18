@@ -26,3 +26,19 @@ while(unias!="s"){
 
     unias=prompt("Desea ver algun precio más? (s para salir)");
 }
+
+
+const servicios = ["Uñas Kapping $800","Uñas esculpidas $1200","Uñas esmaltado semipermanente $800"];
+
+console.log(servicios)
+
+
+let encontrado=unias.find((unias) => unias.titulo == "Uñas kapping con el diseño que usted desee");
+console.log(encontrado);
+
+encontrado=unias.find((unias) => unias.titulo == "Uñas kapping con el diseño que usted desee");
+if(encontrado != undefined){
+    console.log(encontrado);
+}else{
+    console.log("El servicio que usted desea no esta disponible");
+}
