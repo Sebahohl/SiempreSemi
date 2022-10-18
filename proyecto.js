@@ -33,32 +33,30 @@ const carrito = [];
 let totalCarrito;
 let contenedor = document.getElementById("misprods");
 
+
 function renderizarProds(){
     for(const producto of productos){
         contenedor.innerHTML += `
-        <div class="card col-sm-2">
-        <img src= ${producto.foto} class="card-img-top" alt="...">
-            <div class=card-body">
-                <h5 class="card-title">${producto.id}</h5>
-                <p class="card-text">${producto.nombre}</p>
-                <p class="card-text">$ ${producto.precio}</p>
-                <button id="boton" class="btn btn-primary">Comprar</button>
+            <div class="card col-sm-2">
+                <img src=${producto.foto} class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">${producto.id}</h5>
+                    <p class="card-text">${producto.nombre}</p>
+                    <p class="card-text">$ ${producto.precio}</p>
+                    <button id="btn${producto.id}" class="btn btn-primary">Comprar</button>
+                </div>
             </div>
-        </div>
         `;
     }
-}
-renderizarProds();
 
-
-//EVENTOS
+    //EVENTOS
     productos.forEach(producto => {
         //evento para cada boton
         document.getElementById(`btn${producto.id}`).addEventListener("click",function(){
             agregarAlCarrito(producto);
         });
     })
-
+}
 
 renderizarProds();
 
@@ -76,5 +74,6 @@ function agregarAlCarrito(productoComprado){
     totalCarrito = carrito.reduce((acumulador,producto)=> acumulador + producto.precio,0);
     let infoTotal = document.getElementById("total");
     infoTotal.innerText="Total a pagar $: "+totalCarrito;
-
 }
+
+
