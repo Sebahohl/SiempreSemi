@@ -1,7 +1,3 @@
-d
-
-
-
 
 // let nombre = prompt ("Ingresa tu nombre ")
 // alert("Bienvenida/o a siempre semi "+nombre );
