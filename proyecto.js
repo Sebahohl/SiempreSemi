@@ -26,6 +26,7 @@ function dibujarTabla(){
             <td>${producto.id}</td>
             <td>${producto.nombre}</td>
             <td>${producto.precio}</td>
+            <td><button class="btn btn-light" onclick="eliminar(event)">🗑️</button></td>
         </tr>
     `;
     }
@@ -89,26 +90,50 @@ function agregarAlCarrito(productoComprado){
     localStorage.setItem("carrito",JSON.stringify(carrito));
 }
 
-botonFinalizar.onclick = () => {
-    carrito = [];
-    document.getElementById("tablabody").innerHTML="";
-    let infoTotal = document.getElementById("total");
-    infoTotal.innerText="Total a pagar $: ";
-    Toastify({
-        text: "Pronto recibirá un mail de confirmacion",
-        duration: 3000,
-        gravity: 'bottom',
-        position: 'left',
-        style: {
-            background: 'linear-gradient(to right, #00b09b, #96c92d)'
-        }
-    }).showToast();
+async function obtenerJSON() {
+    const URLJSON="productos.json";
+    const resp = await fetch(URLJSON);
+    const data = await resp.json();
+    productosJSON = data;
+    //ya tengo el dolar y los productos, renderizo las cartas
+    renderizarProds();
+}
 
-    //Quiero medir intevalo
-    const cierreDeCompra=DateTime.now();
-    const Interval = luxon.Interval;
-    const tiempo = Interval.fromDateTimes(ahora,cierreDeCompra);
-    console.log("Tardaste "+tiempo.length('seconds')+" en comprar");
+
+
+
+//Cerrando al compra
+botonFinalizar.onclick = () => {
+    if(carrito.length==0){
+        Swal.fire({
+            title: 'El carro está vacío',
+            text: 'compre algun producto',
+            icon: 'error',
+            showConfirmButton: false,
+            timer: 1500
+        })
+    }else{
+        carrito = [];
+        document.getElementById("tablabody").innerHTML="";
+        let infoTotal = document.getElementById("total");
+        infoTotal.innerText="Total a pagar $: ";
+        Toastify({
+            text: "Pronto recibirá un mail de confirmacion",
+            duration: 3000,
+            gravity: 'bottom',
+            position: 'left',
+            style: {
+                background: 'linear-gradient(to right, #00b09b, #96c92d)'
+            }
+        }).showToast();
+
+        //Quiero medir intevalo
+        const cierreDeCompra=DateTime.now();
+        const Interval = luxon.Interval;
+        const tiempo = Interval.fromDateTimes(ahora,cierreDeCompra);
+        console.log("Tardaste "+tiempo.length('seconds')+" en comprar");
+        localStorage.removeItem("carrito");
+    }
 }
 
 function eliminar(ev){
@@ -130,8 +155,3 @@ function eliminar(ev){
     //storage
     localStorage.setItem("carrito",JSON.stringify(carrito)); 
 }
-
-
-
-
-
