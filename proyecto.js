@@ -95,7 +95,6 @@ async function obtenerJSON() {
     const resp = await fetch(URLJSON);
     const data = await resp.json();
     productosJSON = data;
-    //ya tengo el dolar y los productos, renderizo las cartas
     renderizarProds();
 }
 
