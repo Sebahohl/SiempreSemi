@@ -10,6 +10,37 @@
   box-sizing: border-box;
 }
 
+.col-sm-2 {
+  display: flex;
+  align-items: center;
+  margin-left: 9rem;
+  background-color: #bb799d;
+}
+
+.btn-success {
+  margin-left: 35rem;
+  margin-top: 2rem;
+}
+
+.btn-primary {
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-radius: 25px;
+  font-size: 13px;
+  font-family: "Lobster", cursive;
+  padding: 10px;
+  text-transform: uppercase;
+  text-size-adjust: 10px;
+  border-color: #000;
+  text-align: end;
+}
+
+
+
+
 html {
   height: 100%;
   width: 100%;
