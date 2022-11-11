@@ -1,8 +1,38 @@
 
-const carrito = [];
 let totalCarrito;
 let contenedor = document.getElementById("misprods");
+let botonFinalizar = document.getElementById("finalizar");
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+if(carrito.length != 0){
+    console.log("Recuperando carro")
+    dibujarTabla();
+}
 
+//LUXON
+const DateTime = luxon.DateTime;
+//momento en que se ingresa a la web
+const ahora = DateTime.now();
+console.log(ahora.toString());
+console.log(ahora.zoneName);
+console.log(ahora.daysInMonth);
+console.log(ahora.toLocaleString(DateTime.DATETIME_HUGE_WITH_SECONDS));
+const masTarde = ahora.plus({ hours: 5, minutes: 15 });
+console.log(masTarde.toLocaleString(DateTime.DATETIME_HUGE_WITH_SECONDS));
+
+function dibujarTabla(){
+    for(const producto of carrito){
+        document.getElementById("tablabody").innerHTML += `
+        <tr>
+            <td>${producto.id}</td>
+            <td>${producto.nombre}</td>
+            <td>${producto.precio}</td>
+        </tr>
+    `;
+    }
+    totalCarrito = carrito.reduce((acumulador,producto)=> acumulador + producto.precio,0);
+    let infoTotal = document.getElementById("total");
+    infoTotal.innerText="Total a pagar $: "+totalCarrito;
+}
 
 function renderizarProds(){
     for(const producto of productos){
@@ -33,7 +63,18 @@ renderizarProds();
 function agregarAlCarrito(productoComprado){
     carrito.push(productoComprado);
     console.table(carrito);
-    alert("Producto: "+productoComprado.nombre+" agregado al carrito!");
+    //alert("Producto: "+productoComprado.nombre+" agregado al carrito!");
+    //sweet alert
+    Swal.fire({
+        title: productoComprado.nombre,
+        text: 'Agregado al carrito',
+        imageUrl: productoComprado.foto,
+        imageWidth: 200,
+        imageHeight: 200,
+        imageAlt: productoComprado.nombre,
+        showConfirmButton: false,
+        timer: 1500
+        })
     document.getElementById("tablabody").innerHTML += `
         <tr>
             <td>${productoComprado.id}</td>
@@ -44,6 +85,53 @@ function agregarAlCarrito(productoComprado){
     totalCarrito = carrito.reduce((acumulador,producto)=> acumulador + producto.precio,0);
     let infoTotal = document.getElementById("total");
     infoTotal.innerText="Total a pagar $: "+totalCarrito;
+    //storage
+    localStorage.setItem("carrito",JSON.stringify(carrito));
 }
+
+botonFinalizar.onclick = () => {
+    carrito = [];
+    document.getElementById("tablabody").innerHTML="";
+    let infoTotal = document.getElementById("total");
+    infoTotal.innerText="Total a pagar $: ";
+    Toastify({
+        text: "Pronto recibirá un mail de confirmacion",
+        duration: 3000,
+        gravity: 'bottom',
+        position: 'left',
+        style: {
+            background: 'linear-gradient(to right, #00b09b, #96c92d)'
+        }
+    }).showToast();
+
+    //Quiero medir intevalo
+    const cierreDeCompra=DateTime.now();
+    const Interval = luxon.Interval;
+    const tiempo = Interval.fromDateTimes(ahora,cierreDeCompra);
+    console.log("Tardaste "+tiempo.length('seconds')+" en comprar");
+}
+
+function eliminar(ev){
+    console.log(ev);
+    let fila = ev.target.parentElement.parentElement;
+    console.log(fila);
+    let id = fila.children[0].innerText;
+    console.log(id);
+    let indice = carrito.findIndex(producto => producto.id == id);
+    console.log(indice)
+    //remueve el producto del carro
+    carrito.splice(indice,1);
+    console.table(carrito);
+    //remueve la fila de la tabla
+    fila.remove();
+    //recalcular el total
+    let preciosAcumulados = carrito.reduce((acumulador,producto)=>acumulador+producto.precio,0);
+    total.innerText="Total a pagar $: "+preciosAcumulados;
+    //storage
+    localStorage.setItem("carrito",JSON.stringify(carrito)); 
+}
+
+
+
 
 
